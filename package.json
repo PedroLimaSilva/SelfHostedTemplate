@@ -1,0 +1,15 @@
+{
+  "engines": {
+    "node": "21.x"
+  },
+  "scripts": {
+    "start": "cd server && yarn && yarn start",
+    "client:build": "cd client && yarn && yarn build",
+    "build": "yarn client:build",
+    "dev": "yarn start & (cd client && yarn dev)",
+    "docker:deploy": "docker build -t appName . && docker run -p 5555:5555"
+  },
+  "dependencies": {
+    "node-cache": "^5.1.2"
+  }
+}
